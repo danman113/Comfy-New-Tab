@@ -1,0 +1,32 @@
+{
+  "name": "comfy-new-tab",
+  "version": "1.0.0",
+  "description": "A comfy new tab page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danman113/Comfy-New-Tab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danman113/Comfy-New-Tab/issues"
+  },
+  "homepage": "https://github.com/danman113/Comfy-New-Tab#readme",
+  "dependencies": {
+    "moment": "^2.20.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "parcel-bundler": "^1.4.1"
+  }
+}

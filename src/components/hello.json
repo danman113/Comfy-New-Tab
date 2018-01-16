@@ -1,0 +1,274 @@
+{
+  "hellos": [
+    {
+      "lang": "English",
+      "text": "Hello",
+      "pronunciation": "Hello"
+    },
+    {
+      "lang": "Afrikaans",
+      "text": "Hallo",
+      "pronunciation": "Hallo"
+    },
+    {
+      "lang": "Albanian",
+      "text": "Mirë dita",
+      "pronunciation": "Mirë dita"
+    },
+    {
+      "lang": "Amharic",
+      "text": "ታዲያስ",
+      "pronunciation": "Tadiyas"
+    },
+    {
+      "lang": "Arabic",
+      "text": "مرحبا",
+      "pronunciation": "Marhaban"
+    },
+    {
+      "lang": "Azerbaijani",
+      "text": "Салам",
+      "pronunciation": "Salam"
+    },
+    {
+      "lang": "Bengali",
+      "text": "নমস্কার",
+      "pronunciation": "Nomoshkaar"
+    },
+    {
+      "lang": "Bosnian",
+      "text": "Zdravo",
+      "pronunciation": "Zdravo"
+    },
+    {
+      "lang": "Bulgarian",
+      "text": "Здрасти",
+      "pronunciation": "Zdrasti"
+    },
+    {
+      "lang": "Croatian",
+      "text": "Bok",
+      "pronunciation": "Bok"
+    },
+    {
+      "lang": "Czech",
+      "text": "Ahoj",
+      "pronunciation": "Ahoj"
+    },
+    {
+      "lang": "Danish",
+      "text": "Hej",
+      "pronunciation": "Hej"
+    },
+    {
+      "lang": "Dutch",
+      "text": "Verwelkoming",
+      "pronunciation": "Verwelkoming"
+    },
+    {
+      "lang": "Esperanto",
+      "text": "Saluton",
+      "pronunciation": "Saluton"
+    },
+    {
+      "lang": "Estonian",
+      "text": "Tere",
+      "pronunciation": "Tere"
+    },
+    {
+      "lang": "Farsi",
+      "text": "سلام",
+      "pronunciation": "Salaam"
+    },
+    {
+      "lang": "Fijian",
+      "text": "Bula",
+      "pronunciation": "Bula"
+    },
+    {
+      "lang": "Finnish",
+      "text": "Terve",
+      "pronunciation": "Terve"
+    },
+    {
+      "lang": "French",
+      "text": "Bonjour",
+      "pronunciation": "Bonjour"
+    },
+    {
+      "lang": "German",
+      "text": "Guten Tag",
+      "pronunciation": "Guten Tag"
+    },
+    {
+      "lang": "Greek",
+      "text": "Γεια σου",
+      "pronunciation": "Yiassoo"
+    },
+    {
+      "lang": "Hawaiian",
+      "text": "Aloha",
+      "pronunciation": "Aloha"
+    },
+    {
+      "lang": "Hebrew",
+      "text": "שלום",
+      "pronunciation": "Shalom"
+    },
+    {
+      "lang": "Hindi",
+      "text": "नमस्ते",
+      "pronunciation": "Namastē"
+    },
+    {
+      "lang": "Hungarian",
+      "text": "Sziasztok",
+      "pronunciation": "Sziasztok"
+    },
+    {
+      "lang": "Indonesian",
+      "text": "Hai",
+      "pronunciation": "Hai"
+    },
+    {
+      "lang": "Irish",
+      "text": "Dia dhuit",
+      "pronunciation": "Dia dhuit"
+    },
+    {
+      "lang": "Japanese",
+      "text": "こんにちは",
+      "pronunciation": "Konichiwa"
+    },
+    {
+      "lang": "Kannada",
+      "text": "ನಮಸ್ಕಾರ",
+      "pronunciation": "Namaskār"
+    },
+    {
+      "lang": "Khmer",
+      "text": "ជំរាបសួរ",
+      "pronunciation": "Cham Reap Sour"
+    },
+    {
+      "lang": "Korean",
+      "text": "안녕하세요",
+      "pronunciation": "An-nyeong-ha-se-yo"
+    },
+    {
+      "lang": "Lao",
+      "text": "ສະບາຍດີ",
+      "pronunciation": "Sabaai-dii"
+    },
+    {
+      "lang": "Latin",
+      "text": "Salve",
+      "pronunciation": "Salve"
+    },
+    {
+      "lang": "Latvian",
+      "text": "Sveiki",
+      "pronunciation": "Sveiki"
+    },
+    {
+      "lang": "Lithuanian",
+      "text": "Sveiki",
+      "pronunciation": "Sveiki"
+    },
+    {
+      "lang": "Macedonian",
+      "text": "Добар ден",
+      "pronunciation": "Dobar den"
+    },
+    {
+      "lang": "Mandarin",
+      "text": "你好",
+      "pronunciation": "nǐ hǎo"
+    },
+    {
+      "lang": "Maori",
+      "text": "Kia ora",
+      "pronunciation": "Kia ora"
+    },
+    {
+      "lang": "Norwegian",
+      "text": "Hei",
+      "pronunciation": "Hei"
+    },
+    {
+      "lang": "Odia",
+      "text": "ନମସ୍କାର",
+      "pronunciation": "Namaskār"
+    },
+    {
+      "lang": "Polish",
+      "text": "Cześć",
+      "pronunciation": "Cześć"
+    },
+    {
+      "lang": "Portuguese",
+      "text": "Oi",
+      "pronunciation": "Oi"
+    },
+    {
+      "lang": "Romanian",
+      "text": "Alo",
+      "pronunciation": "Alo"
+    },
+    {
+      "lang": "Russian",
+      "text": "Здравствуйте",
+      "pronunciation": "Zdrahstvootye"
+    },
+    {
+      "lang": "Gaelic",
+      "text": "Haló",
+      "pronunciation": "Haló"
+    },
+    {
+      "lang": "Serbian",
+      "text": "Здраво",
+      "pronunciation": "Zdravo"
+    },
+    {
+      "lang": "Shanghainese",
+      "text": "侬好",
+      "pronunciation": "noŋ hɔ"
+    },
+    {
+      "lang": "Spanish",
+      "text": "Hola",
+      "pronunciation": "Hola"
+    },
+    {
+      "lang": "Swedish",
+      "text": "Hallå",
+      "pronunciation": "Hallå"
+    },
+    {
+      "lang": "Tamil",
+      "text": "வனக்கம்",
+      "pronunciation": "vanakkam"
+    },
+    {
+      "lang": "Thai",
+      "text": "สวัสดีค่ะ",
+      "pronunciation": "Sawatdeekha"
+    },
+    {
+      "lang": "Turkish",
+      "text": "Merhaba",
+      "pronunciation": "Merhaba"
+    },
+    {
+      "lang": "Vietnamese",
+      "text": "Xin chào",
+      "pronunciation": "Xin chào"
+    },
+    {
+      "lang": "Yiddish",
+      "text": "שלום",
+      "pronunciation": "Shalom"
+    }
+  ]
+}
