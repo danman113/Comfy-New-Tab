@@ -16,6 +16,7 @@ export default class Welcome extends Component {
     })
   }
   componentWillMount = () => {
+    this.setHello()
     this.interval = setInterval(this.setHello, 1000)
   }
   render() {

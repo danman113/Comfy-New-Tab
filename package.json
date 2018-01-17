@@ -2,17 +2,18 @@
   "name": "comfy-new-tab",
   "version": "1.0.0",
   "description": "A comfy new tab page",
-  "main": "index.js",
+  "main": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ./"
+    "build": "parcel build src/index.html",
+    "release": "npm run build; zip -r comfy-new-tab.zip dist/ manifest.json LICENSE README.md"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danman113/Comfy-New-Tab.git"
   },
-  "author": "",
+  "author": "Daniel Berezin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/danman113/Comfy-New-Tab/issues"
@@ -27,6 +28,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "node-sass": "^4.7.2",
     "parcel-bundler": "^1.4.1"
   }
 }
