@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import moment from 'moment'
-global.moment = moment
 
 const newTime = _ => moment().format('hh:mm:ss')
 const newDate = _ => moment().format('dddd, MMMM Do')

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Clock from '../components/clock'
 import Welcome from '../components/welcome'
+import Box from '../components/glasspanel'
 
 class Tab extends Component {
   state = {
@@ -9,7 +10,7 @@ class Tab extends Component {
     wallpaperUrls: [
       'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-602455.jpg',
       'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-604890.jpg',
-      'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-602627.jpg',
+      // 'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-602627.jpg',
       'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-607375.jpg',
       'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-607377.jpg'
     ],
@@ -56,10 +57,17 @@ class Tab extends Component {
       <section className='background container' style={{backgroundImage: `url(${wallpaper})`}}>
         <Clock />
         <Welcome name={this.state.name} />
+        <a href='#'>HOVER OVER ME</a>
+        <Box wallpaper={wallpaper} frosted className='popover' >
+          <div class='arrow'>
+          </div>
+          <strong>HELLO</strong>
+        </Box>
+        <h2>and over me</h2>
       </section>
     )
   }
 }
 
-const mountNode = document.getElementById("app");
+const mountNode = document.getElementById('app');
 ReactDOM.render(<Tab />, mountNode);

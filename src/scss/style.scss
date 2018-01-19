@@ -1,18 +1,33 @@
+@import 'utils';
+
 $font: sans-serif;
 $color-white: #eee;
+@mixin backgroundAnimation() {
+  -webkit-transition: background-image 3.5s ease-out;
+  transition: background-image 3.5s ease-out;
+}
+
+@mixin backgroundImage() {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
 .background {
+  // Position
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  -webkit-transition: background-image 3.5s ease-out;
-  transition: background-image 3.5s ease-out;
-  cursor: default;
+  z-index: -9999;
+
+  // Background
+  @include backgroundImage();
+
+  // Transition
+  @include backgroundAnimation();
 }
 
 .container {
@@ -24,6 +39,7 @@ $color-white: #eee;
 .welcome {
   font-size: 3em;
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.78);
+  cursor: default;
 }
 
 .clock {
@@ -46,4 +62,60 @@ $color-white: #eee;
 .time {
   font-size: 8em;
   margin: 0;
+}
+
+.box {
+  position: relative;
+  @include clearfix();
+}
+
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(5px);
+  width: 100%;
+  height:100%;
+  background-size: 100%;
+  z-index: -1;
+  @include backgroundImage();
+  @include backgroundAnimation();
+}
+
+.box-content {
+  z-index: 20;
+}
+
+.pill {
+  width: 500px;
+  padding: 25px;
+  float: left;
+  border-radius: 56px;
+  border: 5px solid rgba(255, 255, 255, 0.75);
+}
+
+.popover {
+  width: 250px;
+  padding: 2px;
+  margin-right: 50px;
+  border-radius: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.75);
+}
+
+.arrow {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-right-color: #999;
+  border-right-color: rgba(0,0,0,.25);
+  border-left-width: 0;
+  &::after {
+    content: ' ';
+  }
 }
