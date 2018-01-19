@@ -56,14 +56,7 @@ class Tab extends Component {
     return (
       <section className='background container' style={{backgroundImage: `url(${wallpaper})`}}>
         <Clock />
-        <Welcome name={this.state.name} />
-        <a href='#'>HOVER OVER ME</a>
-        <Box wallpaper={wallpaper} frosted className='popover' >
-          <div class='arrow'>
-          </div>
-          <strong>HELLO</strong>
-        </Box>
-        <h2>and over me</h2>
+        <Welcome name={this.state.name} wallpaper={wallpaper} />
       </section>
     )
   }
