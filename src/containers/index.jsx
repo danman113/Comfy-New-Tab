@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Clock from '../components/clock'
 import Welcome from '../components/welcome'
-import Box from '../components/glasspanel'
+import { WatcherWidget } from '../components/cryptowatcher'
 
 class Tab extends Component {
   state = {
@@ -57,6 +57,7 @@ class Tab extends Component {
       <section className='background container' style={{backgroundImage: `url(${wallpaper})`}}>
         <Clock />
         <Welcome name={this.state.name} wallpaper={wallpaper} />
+        <WatcherWidget wallpaper={wallpaper} />
       </section>
     )
   }
