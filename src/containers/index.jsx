@@ -14,7 +14,8 @@ class Tab extends Component {
       'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-607375.jpg',
       'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-607377.jpg'
     ],
-    selectedWallpaper: 0
+    selectedWallpaper: 0,
+    cryptos: ['BTC', 'ETH', 'LTC']
   }
   interval = null
   cycleWalpaper = () => {
@@ -25,6 +26,12 @@ class Tab extends Component {
 
     this.setState({
       selectedWallpaper: (this.getWallpaper()) % wallpaperUrls.length
+    })
+  }
+
+  addCryptos = () => {
+    this.setState({
+      cryptos: ['BTC', 'ETH', 'LTC', 'XRP']
     })
   }
 
@@ -53,11 +60,15 @@ class Tab extends Component {
 
   render() {
     let wallpaper = this.state.wallpaperUrls[this.state.selectedWallpaper]
+    const {
+      cryptos
+    } = this.state
     return (
       <section className='background container' style={{backgroundImage: `url(${wallpaper})`}}>
         <Clock />
         <Welcome name={this.state.name} wallpaper={wallpaper} />
-        <WatcherWidget wallpaper={wallpaper} />
+        <WatcherWidget wallpaper={wallpaper} cryptos={cryptos} />
+        <button onClick={this.addCryptos}> + </button>
       </section>
     )
   }

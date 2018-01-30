@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import cn from 'classnames'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import GlassPanel from './glasspanel'
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 import 'es6-promise'
@@ -14,7 +16,7 @@ export default class CryptoWatcher extends Component {
 
   interval = null
   getData = (symbol = 'ETH', value = 'USD', days = 7) => {
-    fetch(`https://min-api.cryptocompare.com/data/histohour?fsym=${symbol}&tsym=${value}&limit=${days * 24}&aggregate=1&e=Coinbase`)
+    fetch(`https://min-api.cryptocompare.com/data/histohour?fsym=${symbol}&tsym=${value}&limit=${days * 24}&aggregate=1`)
     .then(res => res.json())
     .then(chart => {
       const data = chart.Data
@@ -46,7 +48,7 @@ export default class CryptoWatcher extends Component {
     } = this.state
 
     return (
-      <GlassPanel wallpaper={wallpaper} className='crypto-panel' frosted>
+      <GlassPanel wallpaper={wallpaper} className={cn('crypto-panel', this.props.className)} frosted>
         <h2>{this.props.symbol} ${this.state.price}</h2>
           <AreaChart
               data={data}
@@ -71,10 +73,18 @@ export const WatcherWidget = ({
   wallpaper,
 }) => (
   <div className='watcher-widget'>
-    {
-      cryptos.map((sym, i) => (
-        <CryptoWatcher symbol={sym} key={i} wallpaper={wallpaper} />
-      ))
-    }
+    <TransitionGroup>
+      {
+        cryptos.map((sym, i) => (
+          <CSSTransition
+            timeout={5000}
+            key={i}
+            classNames="fade"
+          >
+            <CryptoWatcher symbol={sym} key={i} wallpaper={wallpaper} />
+          </CSSTransition>
+        ))
+      }
+    </TransitionGroup>
   </div>
 )

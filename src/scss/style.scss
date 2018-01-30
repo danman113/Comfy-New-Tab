@@ -119,7 +119,7 @@ $border-color: rgba(255, 255, 255, 0.75);
   margin-top: 10px;
   padding-bottom: 10px;
   float: left;
-  margin-right: 15px
+  margin-right: 15px;
 }
 
 .watcher-widget {
@@ -152,8 +152,26 @@ $border-color: rgba(255, 255, 255, 0.75);
 }
 
 .opacity-hide {
-  opacity: 0;
+  opacity: 0 !important;
 }
 .opacity-show {
   opacity: 1;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 800ms ease-in;
 }
