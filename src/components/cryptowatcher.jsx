@@ -49,7 +49,7 @@ export default class CryptoWatcher extends Component {
 
     return (
       <GlassPanel wallpaper={wallpaper} className={cn('crypto-panel', this.props.className)} frosted>
-        <h2>{this.props.symbol} ${this.state.price}</h2>
+        <h2 className='header'>{this.props.symbol} ${this.state.price}</h2>
           <AreaChart
               data={data}
               width={200}
@@ -68,9 +68,27 @@ export default class CryptoWatcher extends Component {
   }
 }
 
+export class AddCryptoButton extends Component {
+  render() {
+    const {
+      wallpaper,
+      addCrypto
+    } = this.props
+
+    return (
+      <GlassPanel wallpaper={wallpaper} className='crypto-button' onClick={_ => addCrypto('XLM')} frosted>
+        <span className='plus'>
+          +
+        </span>
+      </GlassPanel>
+    )
+  }
+}
+
 export const WatcherWidget = ({
   cryptos = ['BTC', 'ETH', 'LTC'],
   wallpaper,
+  addCrypto
 }) => (
   <div className='watcher-widget'>
     <TransitionGroup>
@@ -79,12 +97,20 @@ export const WatcherWidget = ({
           <CSSTransition
             timeout={5000}
             key={i}
-            classNames="fade"
+            classNames={{
+              appear: 'slide-horizontal',
+              appearActive: 'slide-horizontal-active',
+              enter: 'slide-horizontal',
+              enterActive: 'slide-horizontal-active',
+              exit: 'my-exit',
+              exitActive: 'my-active-exit',
+            }}
           >
             <CryptoWatcher symbol={sym} key={i} wallpaper={wallpaper} />
           </CSSTransition>
         ))
       }
+      <AddCryptoButton wallpaper={wallpaper} addCrypto={addCrypto} />
     </TransitionGroup>
   </div>
 )

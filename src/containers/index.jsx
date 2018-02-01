@@ -28,10 +28,9 @@ class Tab extends Component {
       selectedWallpaper: (this.getWallpaper()) % wallpaperUrls.length
     })
   }
-
-  addCryptos = () => {
+  addCryptos = (crypto) => {
     this.setState({
-      cryptos: ['BTC', 'ETH', 'LTC', 'XRP']
+      cryptos: this.state.cryptos.concat(crypto)
     })
   }
 
@@ -67,8 +66,7 @@ class Tab extends Component {
       <section className='background container' style={{backgroundImage: `url(${wallpaper})`}}>
         <Clock />
         <Welcome name={this.state.name} wallpaper={wallpaper} />
-        <WatcherWidget wallpaper={wallpaper} cryptos={cryptos} />
-        <button onClick={this.addCryptos}> + </button>
+        <WatcherWidget wallpaper={wallpaper} cryptos={cryptos} addCrypto={this.addCryptos}/>
       </section>
     )
   }

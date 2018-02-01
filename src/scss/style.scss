@@ -96,6 +96,8 @@ $border-color: rgba(255, 255, 255, 0.75);
   border: 5px solid rgba(255, 255, 255, 0.75);
 }
 
+// POPOVER
+
 .popover-button {
   position: relative;
 }
@@ -109,22 +111,6 @@ $border-color: rgba(255, 255, 255, 0.75);
   margin-top: 10px;
   padding-bottom: 10px;
   transition: opacity 0.25s linear;
-}
-
-.crypto-panel {
-  width: 250px;
-  padding: 2px;
-  border-radius: 25px;
-  border: 4px solid $border-color;
-  margin-top: 10px;
-  padding-bottom: 10px;
-  float: left;
-  margin-right: 15px;
-}
-
-.watcher-widget {
-  display: flex;
-  justify-content: center;
 }
 
 .language-popover {
@@ -151,27 +137,62 @@ $border-color: rgba(255, 255, 255, 0.75);
   margin-top: -21px;
 }
 
+// CRYPTO
+
+.crypto-panel {
+  width: 250px;
+  padding: 2px;
+  border-radius: 25px;
+  border: 4px solid $border-color;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  float: left;
+  margin-right: 15px;
+  .header {
+    white-space: nowrap;
+  }
+}
+
+.crypto-button {
+  cursor: pointer;
+  height: 250 + 18px;
+  padding: 2px;
+  border-radius: 25px;
+  border: 4px solid $border-color;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  float: left;
+  width: 0;
+  opacity: 0.01;
+  transition: width 300ms $size-transition, height 300ms $size-transition;
+  &:hover {
+    width: 50px;
+    opacity: 1;
+  }
+  .plus {
+    font-size: 25px;
+  }
+}
+
+.watcher-widget {
+  display: flex;
+  justify-content: center;
+}
+
+// Animations:
+
 .opacity-hide {
-  opacity: 0 !important;
+  opacity: 0;
 }
 .opacity-show {
   opacity: 1;
 }
 
-.fade-enter {
-  opacity: 0.01;
-}
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 1000ms ease-in;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit.fade-exit-active {
-  opacity: 0.01;
-  transition: opacity 800ms ease-in;
+.slide-horizontal {
+  width: 0px !important;
+  overflow: hidden;
+  &.slide-horizontal-active {
+    width: 250px !important;
+    transition: width 1000ms ;
+  }
 }

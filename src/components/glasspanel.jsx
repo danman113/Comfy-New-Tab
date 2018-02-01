@@ -16,11 +16,12 @@ export default class GlassPanel extends Component {
       wallpaper,
       frosted,
       children,
-      className
+      className,
+      ...extraProps
     } = this.props
 
     return (
-      <div className={cn('box', className)}>
+      <div className={cn('box', className)} {...extraProps}>
         <div
           style={{backgroundImage: `${frosted ? grad: ''} url(${this.props.wallpaper})`}}
           className='blur'>
