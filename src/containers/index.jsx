@@ -8,11 +8,12 @@ class Tab extends Component {
   state = {
     name: 'Daniel',
     wallpaperUrls: [
-      'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-602455.jpg',
-      'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-604890.jpg',
+      // 'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-602455.jpg',
+      // 'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-604890.jpg',
       // 'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-602627.jpg',
-      'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-607375.jpg',
-      'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-607377.jpg'
+      // 'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-607375.jpg',
+      'https://source.unsplash.com/random/1920x1080',
+      // 'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-607377.jpg'
     ],
     selectedWallpaper: 0,
     cryptos: ['BTC', 'ETH', 'LTC']

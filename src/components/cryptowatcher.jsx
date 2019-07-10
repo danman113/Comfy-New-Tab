@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import cn from 'classnames'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import GlassPanel from './glasspanel'
+import { Cond } from './utils'
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 import 'es6-promise'
 import 'isomorphic-fetch'
@@ -40,7 +41,8 @@ export default class CryptoWatcher extends Component {
 
   render() {
     const {
-      wallpaper
+      wallpaper,
+      className
     } = this.props
 
     const {
@@ -48,7 +50,7 @@ export default class CryptoWatcher extends Component {
     } = this.state
 
     return (
-      <GlassPanel wallpaper={wallpaper} className={cn('crypto-panel', this.props.className)} frosted>
+      <span className={this.props.className} style={{float: 'left'}}>
         <h2 className='header'>{this.props.symbol} ${this.state.price}</h2>
           <AreaChart
               data={data}
@@ -63,24 +65,63 @@ export default class CryptoWatcher extends Component {
               dataKey='close'
             />
           </AreaChart>
-      </GlassPanel>
+      </span>
     )
   }
 }
 
+const STATE_BUTTON = 0
+const STATE_FORM = 1
+const STATE_WATCHER = 2
+
 export class AddCryptoButton extends Component {
+  state = {
+    currentState: STATE_BUTTON
+  }
+
+  switchState = () => this.setState({currentState: this.state.currentState + 1})
+
   render() {
     const {
       wallpaper,
-      addCrypto
+      addCrypto,
     } = this.props
 
+    const {
+      currentState
+    } = this.state
+
     return (
-      <GlassPanel wallpaper={wallpaper} className='crypto-button' onClick={_ => addCrypto('XLM')} frosted>
-        <span className='plus'>
-          +
-        </span>
-      </GlassPanel>
+      <span
+        className={cn({
+          'flip': currentState === STATE_WATCHER,
+          'crypto-transition': true
+        })}
+      >
+        <GlassPanel
+          wallpaper={wallpaper}
+          className={
+            cn({
+              'crypto-panel crypto-form': currentState >= STATE_FORM,
+              'crypto-button': currentState === STATE_BUTTON,
+              'crypto-transition': true
+            })
+          }
+          frosted>
+          <Cond q={currentState === STATE_BUTTON}>
+            <span className='plus' onClick={_ => this.switchState()}>
+              +
+            </span>
+          </Cond>
+          <Cond q={currentState === STATE_FORM}>
+            <input type='text' />
+            <button onClick={this.switchState}>Add</button>
+          </Cond>
+          <Cond q={currentState === STATE_WATCHER}>
+            <CryptoWatcher wallpaper={wallpaper} className='back' />
+          </Cond>
+        </GlassPanel>
+      </span>
     )
   }
 }

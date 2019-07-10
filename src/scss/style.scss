@@ -171,12 +171,50 @@ $border-color: rgba(255, 255, 255, 0.75);
   }
   .plus {
     font-size: 25px;
+    vertical-align: middle;
+    line-height: 250px;
   }
+}
+
+.crypto-form {
+  height: 250 + 18px;
+}
+
+.crypto-transition {
+  transition: width 300ms $size-transition, height 300ms $size-transition;
+  perspective: 1000;
+  transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+	backface-visibility: hidden;
 }
 
 .watcher-widget {
   display: flex;
   justify-content: center;
+}
+
+// Flipper
+
+.flip-container {
+  perspective: 1000;
+}
+
+.flipper {
+  transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front {
+  backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.back {
+  transform: rotateY(180deg);
 }
 
 // Animations:
