@@ -35,7 +35,7 @@ export default class CryptoWatcher extends Component {
     this.getData(this.props.symbol)
     this.interval = setInterval(_ => {
       this.getData(this.props.symbol)
-    }, 1000 * 5)
+    }, 1000 * 25)
   }
 
   render() {
